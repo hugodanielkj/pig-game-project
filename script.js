@@ -69,12 +69,8 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
     if (scores[activePlayerStatus] >= 100) {
       playing = false;
       diceEl.classList.add('hidden');
-      document
-        .querySelector(`.player--${activePlayerStatus}`)
-        .classList.add('player--winner');
-      document
-        .querySelector(`.player--${activePlayerStatus}`)
-        .classList.remove('player--active');
+      document.querySelector(`.player--${activePlayerStatus}`).classList.add('player--winner');
+      document.querySelector(`.player--${activePlayerStatus}`).classList.remove('player--active');
     } else {
       //Current score becomes 0 and switch to the next player
       switchPlayer();
@@ -83,22 +79,13 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
 });
 
 //New Game Functionality
-document.querySelector('.btn--new').addEventListener('click', function() {
-  document
-  .querySelector('#current--0')
-  .textContent = 0;
-  document
-  .querySelector('#current--1')
-  .textContent = 0;
-  document
-  .querySelector(`.player--${activePlayerStatus}`)
-  .classList.remove('player--winner');
-  document
-  .querySelector('.player--1')
-  .classList.remove('player--active');
-  document
-  .querySelector('.player--0')
-  .classList.add('player--active');
+document.querySelector('.btn--new').addEventListener('click', function () {
+  document.querySelector('#current--0').textContent = 0;
+  document.querySelector('#current--1').textContent = 0;
+  document.querySelector(`.player--${activePlayerStatus}`).classList.remove('player--winner');
+  document.querySelector('.player--1').classList.remove('player--active');
+  document.querySelector('.player--0').classList.add('player--active');
+  document.querySelector('.dice').classList.add('hidden');
 
   scores = [0, 0];
   currentScore = 0;
@@ -107,4 +94,4 @@ document.querySelector('.btn--new').addEventListener('click', function() {
 
   score0El.textContent = 0;
   score1El.textContent = 0;
-})
+});
