@@ -94,7 +94,10 @@ document.querySelector('.btn--new').addEventListener('click', function() {
   .querySelector(`.player--${activePlayerStatus}`)
   .classList.remove('player--winner');
   document
-  .querySelector(`.player--0`)
+  .querySelector('.player--1')
+  .classList.remove('player--active');
+  document
+  .querySelector('.player--0')
   .classList.add('player--active');
 
   scores = [0, 0];
