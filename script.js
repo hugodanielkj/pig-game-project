@@ -37,7 +37,6 @@ const switchPlayer = function () {
 
 // Roll Dice Funcionality
 document.querySelector('.btn--roll').addEventListener('click', function () {
-  alert('Before game starts, here are the rules: Your objective is to achieve 100 points first. If your dice rolls number 1, your turn will be skipped and you lose all your current points. You can prevent it by use hold buttom, so you will skip your turn but keep your current points.')
   if (playing) {
     // Generate a random number to dice
     const diceNumber = Math.trunc(Math.random() * 6) + 1;
